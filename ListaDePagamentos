@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main ()
+{
+  char clientes[4][46];
+  float pagamento[4][1];
+  int i,j;
+
+  system("clear");
+  printf("Lista Clientes:\n\n");
+  for(i=0;i<4;i++)
+    {
+      printf("%dº Cliente: ",i+1);
+       gets(clientes[i]);
+    }
+  system("clear");
+  printf("\n");
+  
+  for(i=0;i<4;i++)
+    {
+    printf("\n%s - Pagamento\n\n",clientes[i]);
+    for(j=0;j<1;j++)
+    {
+      printf("Valor a pagar: ");
+      scanf("%f",&pagamento[i][j]);
+    }
+  }
+  system("clear");
+
+  printf("TABELA DE PAGAMENTOS: \n\n");
+
+  for(i=0;i<4;i++)
+    {
+      printf("\nCliente: %s\n",clientes[i]);
+      for(j=0;j<1;j++)
+        {
+          printf("Salário: R$ %.2f",pagamento[i][j]);
+          printf("\n");
+        }
+    }
+return 0;
+}
